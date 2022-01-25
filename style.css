@@ -1,0 +1,98 @@
+#layout{
+    background-color: black;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px; */
+    text-align: center;
+}
+.title{
+    text-align: center;
+}
+.title h1{
+    margin:5px;
+    font-size: 50px;
+    color:rgb(255, 255, 255)
+}
+/* Queda para cuando realice todo el codigo, el objetivo es que el tablero se ajuste a la pagina */
+/*#board{
+    text-align: center;
+    background-color: rgb(84, 166, 169);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(25px, auto);
+    padding: 10px;
+    height: 800px;
+    width: 800px;
+    margin: 10px;
+    
+    min-width: 300px;
+    max-width: 800px;
+    min-height: 300px;
+    max-height: 800px;
+}
+.box{
+    background-color: #4b4b4b;
+    padding: 50px;
+    min-width: 20px;
+    max-width: 80px;
+    min-height: 20px;
+    max-height: 80px;
+} */
+main{
+    display: flex;
+    justify-content: center;
+}
+#board{
+    background-color: rgb(84, 166, 169);
+    padding: 10px;
+    height: 800px;
+    width: 800px; 
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(25px, auto);
+}
+.box{
+    background-color: #4b4b4b;
+    margin-bottom:5px;
+    padding: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border:3px solid rgb(38, 38, 38);
+} 
+footer{
+    padding: 10px;
+}
+.imgOnFooter{
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0px 5px;
+}
+#finish{
+    background-color: rgb(84, 166, 169);
+    color:white;
+    font-size: 100px;
+    width: 800px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+}
+#refresh{
+    background-color: rgb(25, 88, 90);
+    border-radius: 15px;
+    border: 3px solid rgb(11, 37, 38);
+    color:rgb(198, 214, 214);
+    font-size: 30px;
+    padding: 20px;
+    height: auto;
+    width: max-content;
+    margin-top: 40px;
+}
