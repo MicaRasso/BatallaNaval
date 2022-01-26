@@ -1,17 +1,6 @@
 #layout{
     background-color: black;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px; */
     text-align: center;
-}
-.title{
-    text-align: center;
-}
-.title h1{
-    margin:5px;
-    font-size: 50px;
-    color:rgb(255, 255, 255)
 }
 /* Queda para cuando realice todo el codigo, el objetivo es que el tablero se ajuste a la pagina */
 /*#board{
@@ -40,26 +29,56 @@
     max-height: 80px;
 } */
 main{
-    display: flex;
-    justify-content: center;
+    justify-items: center;
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(10px, auto);
+    /* grid-template-rows: repeat(4, 1fr); */
 }
-#board{
+#title{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-content: center;
+    height: auto;
+    width: auto;
+}
+#title h1{
+    text-align: center;
+    margin:5px;
+    font-size: 50px;
+    color:rgb(255, 255, 255);
+    padding: 20px;
+}
+/*sign es el id del cartel de los comentarios del juego*/
+#sign{
+    grid-column: 2/3;
+    grid-row: 2/5;
     background-color: rgb(84, 166, 169);
     padding: 10px;
-    height: 800px;
-    width: 800px; 
+    height: 200px;
+    width: 400px; 
+    border-radius: 15px;
+}
+#board{
+    /*Ubicación en el grid de #main*/
+    grid-column: 3/7;
+    grid-row: 1/5;
+    /*Caracteristicas del board*/
+    background-color: rgb(84, 166, 169);
+    border-radius: 15px;
+    padding: 15px;
+    height: 500px;
+    width: 500px; 
     margin: 10px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 5px;
-    grid-auto-rows: minmax(25px, auto);
+    grid-gap: 3px;
+    grid-auto-rows: minmax(10px, auto);
 }
 .box{
     background-color: #4b4b4b;
-    margin-bottom:5px;
-    padding: 50px;
-    width: 50px;
-    height: 50px;
+    padding: 10px;
     border-radius: 10px;
     border:3px solid rgb(38, 38, 38);
 } 
@@ -68,31 +87,47 @@ footer{
 }
 .imgOnFooter{
     background-color: white;
-    height: 35px;
-    width: 35px;
-    border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    border-radius: 15px;
     padding: 10px;
     margin: 0px 5px;
+    border: 1px none;
 }
+/*finish es el id del cartel al finalizar el juego*/
 #finish{
+    /*Ubicación en el grid de #main*/
+    grid-column: 1/7;
+    grid-row: 2/5;
+    /*Caracteristicas del board*/
     background-color: rgb(84, 166, 169);
-    color:white;
-    font-size: 100px;
-    width: 800px;
-    height: 400px;
-    padding: 20px;
     border-radius: 15px;
+    padding: 15px;
+    height: 300px;
+    width: 500px; 
+    margin: 10px;
     text-align: center;
     align-items: center;
+    margin-bottom: 40px;
 }
+
+#finish p{
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    margin:30px;
+}
+/*refresh es el id del botón para volver a jugar luego de terminar la partida */
 #refresh{
     background-color: rgb(25, 88, 90);
     border-radius: 15px;
     border: 3px solid rgb(11, 37, 38);
     color:rgb(198, 214, 214);
-    font-size: 30px;
+    font-size: 20px;
     padding: 20px;
     height: auto;
     width: max-content;
-    margin-top: 40px;
+}
+.sign-text{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
